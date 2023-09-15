@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState([]);
-  const [submittedCountry, setSubmittedContry] = useState('')
+  const [submittedCountry, setSubmittedContry] = useState([])
 // handling submitted country state
   const handleSubmit = (country) => {
     setSubmittedContry([...submittedCountry,country]);
@@ -13,7 +13,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/countries")
+    fetch("https://restcountries.com/v3.1/all")
     .then(resp => resp.json())
     .then(data => 
       setCountries(data))
