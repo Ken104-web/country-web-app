@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   const [countries, setCountries] = useState([]);
   const [submittedCountry, setSubmittedContry] = useState([])
+
 // handling submitted country state
   const handleSubmit = (country) => {
     setSubmittedContry([...submittedCountry,country]);
@@ -20,7 +21,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <CountryApp countries={countries} onSubmit={handleSubmit}/>
+      <CountryApp countries={countries} onCountrySubmit={handleSubmit}/>
       <ShowCountries  submittedCountry={submittedCountry}/>
     </div>
   );
