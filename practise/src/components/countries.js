@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-function CountryApp() {
+function CountryApp({onCountrySubmit}) {
   const [country, setCountry] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // a callback funtion to call the submitted country name
+    onCountrySubmit(country)
   };
     return (
         <div>

@@ -5,6 +5,12 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [submittedCountry, setSubmittedContry] = useState('')
+// handling submitted country state
+  const handleSubmit = (country) => {
+    setSubmittedContry([...submittedCountry,country]);
+  }
+
 
   useEffect(() => {
     fetch("http://localhost:3000/countries")
@@ -14,8 +20,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <CountryApp countries={countries}/>
-      <ShowCountries />
+      <CountryApp countries={countries} onSubmit={handleSubmit}/>
+      <ShowCountries  submittedCountry={submittedCountry}/>
     </div>
   );
 }
