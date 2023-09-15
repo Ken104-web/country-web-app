@@ -1,6 +1,6 @@
 import React from "react";
 
-function showCountries(countries){
+function ShowCountries(countries){
     return(
         <div>
             {countries.map(country => (
@@ -15,4 +15,4 @@ function showCountries(countries){
     )
 }
 
-export default showCountries;
+export default ShowCountries;

@@ -9,7 +9,7 @@ function CountryApp() {
     return (
         <div>
             <h1>Country web app</h1>
-            <form onsubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name your country Here: </label>
                     <input
